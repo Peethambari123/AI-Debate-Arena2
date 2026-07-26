@@ -26,9 +26,21 @@ mongoose.set('bufferCommands', false);
 if (process.env.MONGO_URI) {
   console.log('🔄 Connecting to MongoDB Atlas...');
   mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
+    .then(async () => {
       console.log('✅ MongoDB connected successfully to Atlas!');
       isMongoConnected = true;
+      try {
+        // Drop legacy googleId_1 index if it exists to fix E11000 duplicate key error on null googleId
+        await User.collection.dropIndex('googleId_1');
+        console.log('Successfully dropped legacy googleId_1 index');
+      } catch (e) {
+        // Index might not exist or already dropped
+      }
+      try {
+        await User.syncIndexes();
+      } catch (e) {
+        console.warn('Index sync notice:', e.message);
+      }
     })
     .catch(err => {
       console.warn('⚠️ MongoDB connection failed. Running in in-memory fallback mode:', err.message);
@@ -45,7 +57,7 @@ const userSchema = new mongoose.Schema({
   username:      { type: String, required: true, unique: true, lowercase: true, trim: true },
   email:         { type: String, required: true, unique: true, lowercase: true, trim: true },
   password:      { type: String }, // bcrypt password hash
-  googleId:      { type: String, default: null, sparse: true },
+  googleId:      { type: String, sparse: true, index: true },
   avatar:        { type: String, default: '' },
   createdAt:     { type: Date, default: Date.now },
   lastLogin:     { type: Date, default: Date.now },
@@ -97,11 +109,26 @@ const debateSchema = new mongoose.Schema({
 });
 const Debate = mongoose.models.Debate || mongoose.model('Debate', debateSchema);
 
-// Middleware
+// Middleware & Enhanced CORS Configuration
+const allowedOrigins = [
+  'https://ai-debate-arena.vercel.app',
+  process.env.FRONTEND_URL,
+  process.env.CLIENT_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: true,
-  credentials: true
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl, server-to-server) or any origin in production/development
+    if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      return callback(null, true);
+    }
+    return callback(null, true); // Fallback allow all origins to ensure seamless Vercel integration
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }));
+app.options('*', cors());
 app.use(express.json());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'debatesecret',

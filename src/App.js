@@ -8,6 +8,7 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import ForgotPasswordPage from './components/ForgotPasswordPage';
 import ProfilePage from './components/ProfilePage';
+import { getApiUrl } from './utils/apiConfig';
 import './App.css';
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
     const savedToken = localStorage.getItem('token');
     if (savedToken) {
       // Validate token with backend /auth/me
-      fetch('/auth/me', {
+      fetch(getApiUrl('/auth/me'), {
         headers: { Authorization: `Bearer ${savedToken}` }
       })
         .then((res) => {
@@ -68,7 +69,7 @@ function App() {
     setLoadingHistory(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/debates/history', {
+      const res = await fetch(getApiUrl('/debates/history'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -104,7 +105,7 @@ function App() {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await fetch('/auth/logout', {
+        await fetch(getApiUrl('/auth/logout'), {
           method: 'POST',
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -124,7 +125,7 @@ function App() {
     if (!window.confirm('Delete this debate from history?')) return;
     try {
       const token = localStorage.getItem('token');
-      await fetch(`/debates/${id}`, {
+      await fetch(getApiUrl(`/debates/${id}`), {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

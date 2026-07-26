@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { KeyRound, Mail, Lock, ArrowRight, CheckCircle2, AlertCircle, ArrowLeft } from 'lucide-react';
+import { getApiUrl } from '../utils/apiConfig';
 
 const ForgotPasswordPage = ({ onSwitchToLogin }) => {
   const [step, setStep] = useState(1); // 1: Enter email, 2: Set new password
@@ -22,7 +23,7 @@ const ForgotPasswordPage = ({ onSwitchToLogin }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('/auth/forgot-password', {
+      const res = await fetch(getApiUrl('/auth/forgot-password'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim() })
@@ -62,7 +63,7 @@ const ForgotPasswordPage = ({ onSwitchToLogin }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('/auth/reset-password', {
+      const res = await fetch(getApiUrl('/auth/reset-password'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

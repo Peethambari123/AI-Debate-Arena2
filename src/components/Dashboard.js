@@ -8,6 +8,7 @@ import {
   ResponsiveContainer, AreaChart, Area, XAxis, YAxis, 
   Tooltip, PieChart, Pie, Cell, BarChart, Bar 
 } from 'recharts';
+import { getApiUrl } from '../utils/apiConfig';
 
 const Dashboard = ({ history = [], onStartDebate }) => {
   const [analyticsData, setAnalyticsData] = useState(null);
@@ -20,7 +21,7 @@ const Dashboard = ({ history = [], onStartDebate }) => {
         const headers = {};
         if (token) headers['Authorization'] = `Bearer ${token}`;
 
-        const res = await fetch('/debates/analytics', { headers });
+        const res = await fetch(getApiUrl('/debates/analytics'), { headers });
         if (res.ok) {
           const data = await res.json();
           setAnalyticsData(data);

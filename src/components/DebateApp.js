@@ -6,6 +6,7 @@ import {
   BarChart2, Shield, AlertTriangle, CheckCircle, TrendingUp
 } from 'lucide-react';
 import ScoreBreakdownView from './ScoreBreakdownView';
+import { getApiUrl } from '../utils/apiConfig';
 
 // Predefined topics
 const PREDEFINED_TOPICS = [
@@ -71,7 +72,7 @@ const apiKey = process.env.REACT_APP_GOOGLE_AI_API_KEY || '';
 
 const callGoogleAI = async (prompt, maxTokens = 1000) => {
   try {
-    const res = await fetch('/api/gemini', {
+    const res = await fetch(getApiUrl('/api/gemini'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt, maxTokens })
@@ -752,7 +753,7 @@ const DebateApp = () => {
       const headers = { 'Content-Type': 'application/json' };
       if (token) headers['Authorization'] = `Bearer ${token}`;
 
-      const res = await fetch('/debates/save', {
+      const res = await fetch(getApiUrl('/debates/save'), {
         method: 'POST',
         headers,
         body: JSON.stringify({

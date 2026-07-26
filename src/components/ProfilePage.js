@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { User, Mail, Shield, Calendar, KeyRound, LogOut, CheckCircle2, AlertCircle, Camera, Clock, AtSign, Save, Sparkles } from 'lucide-react';
+import { getApiUrl } from '../utils/apiConfig';
 
 const ProfilePage = ({ user, onUserUpdated, onLogout }) => {
   const [activeTab, setActiveTab] = useState('overview'); // 'overview' | 'edit' | 'security'
@@ -34,7 +35,7 @@ const ProfilePage = ({ user, onUserUpdated, onLogout }) => {
       const token = localStorage.getItem('token');
       if (!token) return;
 
-      const res = await fetch('/auth/me', {
+      const res = await fetch(getApiUrl('/auth/me'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -76,7 +77,7 @@ const ProfilePage = ({ user, onUserUpdated, onLogout }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/auth/profile', {
+      const res = await fetch(getApiUrl('/auth/profile'), {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -127,7 +128,7 @@ const ProfilePage = ({ user, onUserUpdated, onLogout }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('/auth/password', {
+      const res = await fetch(getApiUrl('/auth/password'), {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

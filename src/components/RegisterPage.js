@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User, Mail, Lock, UserPlus, ArrowRight, AlertCircle, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { getApiUrl } from '../utils/apiConfig';
 
 const RegisterPage = ({ onRegisterSuccess, onSwitchToLogin }) => {
   const [fullName, setFullName] = useState('');
@@ -67,7 +68,7 @@ const RegisterPage = ({ onRegisterSuccess, onSwitchToLogin }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('/auth/register', {
+      const res = await fetch(getApiUrl('/auth/register'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -99,7 +100,7 @@ const RegisterPage = ({ onRegisterSuccess, onSwitchToLogin }) => {
   const handleGoogleLogin = () => {
     setGoogleLoading(true);
     setError('');
-    window.location.href = '/auth/google';
+    window.location.href = getApiUrl('/auth/google');
   };
 
   return (
