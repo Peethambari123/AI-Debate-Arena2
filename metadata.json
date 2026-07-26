@@ -1,0 +1,6 @@
+{
+  "name": "AI Debate Arena",
+  "description": "Voice-powered AI debate application where users challenge AI in intelligent debates.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
