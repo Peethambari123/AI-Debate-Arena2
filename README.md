@@ -279,9 +279,9 @@ Open `http://localhost:3000` in **Chrome or Edge** (required for voice features)
 
 ## 👩‍💻 Developer
 
-**Vasavi Motupalli**
+**Peethambari Manavarti**
 
-- GitHub: [@vasavimotupalli444](https://github.com/vasavimotupalli444)
+- GitHub: [@Peethambari123](https://github.com/Peethambari123)
 
 ---
 
