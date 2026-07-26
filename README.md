@@ -113,7 +113,7 @@ ai-debate-app/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/vasavimotupalli444/ai-debate-arena.git
+git clone https://github.com/Peethambari123/AI-Debate-Arena2.git
 cd ai-debate-arena
 ```
 
