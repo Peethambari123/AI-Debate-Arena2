@@ -54,7 +54,7 @@ The platform combines Artificial Intelligence, Natural Language Processing, Spee
 - 📈 Interactive dashboard for long-term progress tracking
 - 🔐 Secure authentication using JWT and Google OAuth
 - ⚡ Modern React + Express + MongoDB architecture
-- 
+  
 ---
 # ❗ Problem Statement
 
