@@ -46,6 +46,14 @@ Unlike traditional conversational AI systems, AI Debate Arena follows a complete
 The platform combines Artificial Intelligence, Natural Language Processing, Speech Technologies, Analytics, and Modern Web Development to provide an engaging environment for improving debating and communication skills.
 
 ---
+# 🚀 Project Highlights
+
+- 🤖 AI-powered structured debate platform
+- 🎙 Supports both Voice and Text debate modes
+- 📊 Transparent AI evaluation with performance analytics
+- 📈 Interactive dashboard for long-term progress tracking
+- 🔐 Secure authentication using JWT and Google OAuth
+- ⚡ Modern React + Express + MongoDB architecture
 
 # ❗ Problem Statement
 
