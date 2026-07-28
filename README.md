@@ -2,576 +2,1220 @@
 
 # ⚔️ AI Debate Arena
 
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge&logo=github)](https://github.com/Peethambari123/AI-Debate-Arena2)
-[![Deployment](https://img.shields.io/badge/Render-Deployed-000000.svg?style=for-the-badge&logo=render&logoColor=white)](https://ai-debate-backend-o9rt.onrender.com/)
-[![Database](https://img.shields.io/badge/MongoDB_Atlas-Connected-47A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/cloud/atlas)
-[![AI Engine](https://img.shields.io/badge/Google_Gemini-3.6_Flash-4285F4.svg?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
-[![License](https://img.shields.io/badge/License-Educational-blue.svg?style=for-the-badge)](https://github.com/Peethambari123/AI-Debate-Arena2)
+### **An Intelligent AI-Powered Debate & Rhetorical Analytics Platform**
 
-### *An Intelligent, Real-Time AI-Powered Structured Debate & Rhetorical Analytics Platform*
+Practice structured debates against an adaptive AI opponent, receive real-time feedback, improve logical reasoning, strengthen public speaking skills, and track your progress with comprehensive analytics.
 
-**Master the art of persuasion, critical thinking, and structured argument generation against an adaptive LLM debater.**
+---
 
-[🚀 Live Demo](https://ai-debate-backend-o9rt.onrender.com/) • [📂 GitHub Repository](https://github.com/Peethambari123/AI-Debate-Arena2) • [🐛 Report Bug](https://github.com/Peethambari123/AI-Debate-Arena2/issues) • [✨ Request Feature](https://github.com/Peethambari123/AI-Debate-Arena2/issues)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-API-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
+[![Google Gemini](https://img.shields.io/badge/Google-Gemini%20AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![JWT](https://img.shields.io/badge/JWT-Authentication-000000?style=for-the-badge&logo=jsonwebtokens)](https://jwt.io/)
+[![OAuth](https://img.shields.io/badge/Google-OAuth%202.0-4285F4?style=for-the-badge&logo=google)](https://developers.google.com/identity)
+[![Render](https://img.shields.io/badge/Render-Deployed-000000?style=for-the-badge&logo=render)](https://render.com/)
+[![License](https://img.shields.io/badge/License-Educational-blue?style=for-the-badge)](#license)
+
+<br>
+
+🚀 **Live Demo:** https://ai-debate-backend-o9rt.onrender.com/
+
+📂 **Repository:** https://github.com/Peethambari123/AI-Debate-Arena2
+
+⭐ Star this repository if you found it useful!
 
 </div>
 
 ---
 
-## 📑 Table of Contents
+# 📖 Table of Contents
 
-- [Overview](#-overview)
-  - [Why It Was Built](#why-it-was-built)
-  - [Problem Statement](#problem-statement)
-  - [Objectives](#objectives)
-  - [Benefits](#benefits)
-- [Key Features](#-key-features)
-- [Screenshots](#-screenshots)
-- [Tech Stack](#-tech-stack)
-- [System Architecture](#-system-architecture)
-- [Workflow](#-workflow)
-- [Project Structure](#-project-structure)
-- [Authentication Flow](#-authentication-flow)
-- [AI Debate Flow](#-ai-debate-flow)
-- [AI Evaluation Criteria](#-ai-evaluation-criteria)
-- [Analytics Dashboard](#-analytics-dashboard)
-- [Debate History](#-debate-history)
-- [Installation & Setup](#-installation--setup)
-- [Environment Variables](#-environment-variables)
-- [Deployment](#-deployment)
-- [API Endpoints](#-api-endpoints)
-- [Challenges Faced](#-challenges-faced)
-- [Key Learnings](#-key-learnings)
-- [Future Enhancements](#-future-enhancements)
-- [Developer](#-developer)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Support](#-support)
-- [Acknowledgements](#-acknowledgements)
+- Overview
+- Why AI Debate Arena?
+- Problem Statement
+- Objectives
+- Benefits
+- Key Features
+- Screenshots
+- Technology Stack
+- System Architecture
+- Workflow
+- Project Structure
+- Authentication Flow
+- AI Debate Flow
+- AI Evaluation
+- Analytics Dashboard
+- Debate History
+- Installation
+- Environment Variables
+- Deployment
+- API Documentation
+- Security
+- Challenges
+- Future Enhancements
+- Contributing
+- License
+- Developer
 
 ---
 
-## 🌐 Overview
+# 🌍 Overview
 
-**AI Debate Arena** is an advanced, full-stack web application engineered to elevate human debate skills through real-time interaction with an intelligent, adaptive AI opponent powered by **Google Gemini**.
+**AI Debate Arena** is a full-stack AI-powered web application that enables users to engage in structured debates against an intelligent virtual opponent.
 
-Whether preparing for formal competitive debate leagues, polishing public speaking skills, or honing logical reasoning, users can engage in timed debates using either **voice** or **text** mode. The platform evaluates performance across key rhetorical dimensions, providing objective scoring, logical fallacy detection, counter-argument breakdowns, and detailed statistical analytics over time.
+Instead of chatting with a generic chatbot, users participate in formal debates where the AI actively challenges arguments, provides counterpoints, evaluates reasoning, and delivers detailed performance analytics after every session.
 
-### Why It Was Built
-Competitive debating and public speaking training traditionally require human debate partners, certified judges, and dedicated practice spaces. Finding immediate, objective feedback on logical consistency and rebuttal power can be challenging. **AI Debate Arena** was built to democratize access to high-tier debate training by providing an always-available, highly competent AI opponent capable of adapting to varying difficulty levels.
+The platform supports both **text-based** and **voice-based** debates, making it suitable for students, competitive debaters, public speakers, interview preparation, and anyone interested in improving critical thinking and communication skills.
 
-### Problem Statement
-- **Lack of On-Demand Practice Partners:** Human debate practice requires scheduling with partners of similar skill levels.
-- **Subjective Feedback:** Human judges often bring unconscious bias, making objective performance tracking difficult.
-- **Inaccessible Voice Integration:** Most AI chat platforms rely solely on text, ignoring oral delivery and spontaneous counter-arguing.
-- **Scarcity of Analytical Tracking:** Traditional debate prep rarely offers quantitative tracking of win rates, average rhetoric scores, and logical consistency over extended periods.
-
-### Objectives
-1. Provide an adaptive, real-time AI debate partner capable of multi-turn counter-arguments.
-2. Integrate native voice recognition and speech synthesis for immersive speech practice.
-3. Deliver comprehensive quantitative scoring across 6 distinct rhetorical parameters.
-4. Maintain persistent user profiles, analytics dashboards, and historical debate replays using MongoDB Atlas.
-5. Offer secure dual-authentication via JWT and Google OAuth 2.0.
-
-### Benefits
-- **Immediate Rhetorical Feedback:** Receive multi-parameter feedback instantly after concluding a debate.
-- **Voice & Text Flexibility:** Practice verbal articulation with speech recognition or structured writing via text.
-- **Scalable Difficulty:** Challenge yourself across **School**, **College**, or **Professional** AI difficulty modes.
-- **Data-Driven Progress:** Track performance metrics, score progressions, and debate statistics over time.
+Using **Google Gemini AI**, the system generates context-aware rebuttals, evaluates debate quality, and provides constructive feedback to help users continuously improve.
 
 ---
 
-## ✨ Key Features
+# 💡 Why AI Debate Arena?
 
-### 🔐 Authentication & Profile Management
-- **JWT Authentication:** Secure token-based user registration, login, session validation, and password resetting using bcrypt hashing.
-- **Google OAuth 2.0 Integration:** Seamless single-click authentication powered by Passport.js and Google OAuth credentials.
-- **Custom Profile Editor:** Update user full names, custom usernames, avatar picture URLs, or select from built-in avatar presets.
-- **Protected Client Routes:** Route protection guarding private dashboard views, debate arenas, and profile settings.
+Traditional debate practice often requires experienced partners, judges, or mentors. This makes regular practice difficult for many learners.
 
-### 🤖 AI Debate Engine & Speech Interaction
-- **Adaptive Gemini AI Opponent:** Real-time counter-arguments driven by Google Gemini API with custom system prompts tuned for structured rebuttal.
-- **Dual Communication Modes:**
-  - **Text Mode:** Full-featured markdown input with real-time word counter and formatting support.
-  - **Voice Mode:** Real-time Web Speech API recognition (Speech-to-Text) and natural Speech Synthesis (Text-to-Speech) for spoken debate rounds.
-- **Customizable Debate Settings:** Choose from predefined topics or input custom propositions; select debate durations (1 to 60 minutes) and difficulty levels.
-- **Dynamic Debate Timer:** Real-time countdown timer enforcing formal turn limits and round conclusions.
+AI Debate Arena removes these barriers by offering an AI opponent that is always available, adapts to different difficulty levels, and provides objective feedback after every debate.
 
-### 📊 Comprehensive Evaluation & Analytics Dashboard
-- **6-Point AI Rhetorical Evaluation:** Multi-factor scoring assessing Topic Relevance, Argument Quality, Evidence Usage, Counter-Arguments, Logical Consistency, and Communication Style.
-- **Winner Declaration & Key Insights:** Automatic match winner determination accompanied by key strengths, weaknesses, and recommended improvements.
-- **Analytics Dashboard:** Visual performance graphs generated via Recharts including total debates, win rate percentages, average score progression, and topic distribution.
-- **Historical Debate Archive:** Persistent MongoDB database storing past debates with full transcript replays, score breakdowns, and deletion capabilities.
+Whether you're preparing for competitions, improving public speaking skills, or simply strengthening logical reasoning, AI Debate Arena offers an interactive environment for continuous learning.
 
 ---
 
-## 📸 Screenshots
+# ❗ Problem Statement
 
-> *Replace the placeholder image paths below with actual screenshot links or local images inside your repository.*
+Developing strong debating skills requires consistent practice and high-quality feedback.
 
-| Landing Page | Login Page |
-| :---: | :---: |
-| ![Landing Page](https://via.placeholder.com/600x350/0f172a/60a5fa?text=AI+Debate+Arena+Landing+Page) | ![Login Page](https://via.placeholder.com/600x350/0f172a/60a5fa?text=Secure+JWT+%26+Google+OAuth) |
+However, existing solutions often have several limitations:
 
-| Interactive Debate Arena | Analytics Dashboard |
-| :---: | :---: |
-| ![Debate Arena](https://via.placeholder.com/600x350/0f172a/60a5fa?text=Live+Voice+%26+Text+Debate+Arena) | ![Analytics Dashboard](https://via.placeholder.com/600x350/0f172a/60a5fa?text=Recharts+Performance+Analytics) |
+- Finding debate partners can be difficult.
+- Human evaluations may introduce subjectivity.
+- Most AI chat applications focus on conversation rather than structured debate.
+- Users rarely receive detailed performance analysis.
+- Progress tracking across multiple debates is often unavailable.
+- Voice-based debating support is limited in many platforms.
 
-| Score Evaluation Breakdown | Debate History Archive |
-| :---: | :---: |
-| ![Evaluation Breakdown](https://via.placeholder.com/600x350/0f172a/60a5fa?text=AI+Rhetorical+Score+Breakdown) | ![Debate History](https://via.placeholder.com/600x350/0f172a/60a5fa?text=Persistent+Debate+History) |
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend Architecture
-
-| Category | Technology | Usage Description |
-| :--- | :--- | :--- |
-| **Framework** | **React.js (v18)** | Component-based UI rendering and client state management |
-| **Styling** | **Tailwind CSS** | Utility-first, high-contrast dark theme responsive design |
-| **Animations** | **Framer Motion** | Smooth visual transitions and interactive feedback |
-| **Data Viz** | **Recharts** | Interactive line charts, bar graphs, and score distribution pie charts |
-| **Icons** | **Lucide React** | Clean vector iconography across navigation and controls |
-| **Speech STT** | **Web Speech API** | Native Web SpeechRecognition for real-time voice input |
-| **Speech TTS** | **SpeechSynthesis API** | Native browser text-to-speech engine for spoken AI counter-arguments |
-
-### Backend Architecture
-
-| Category | Technology | Usage Description |
-| :--- | :--- | :--- |
-| **Runtime** | **Node.js** | Asynchronous server runtime environment |
-| **Framework** | **Express.js** | Modular RESTful API route handling and middleware dispatching |
-| **Database** | **MongoDB Atlas** | Managed cloud NoSQL database for accounts and debate transcripts |
-| **ORM / ODM** | **Mongoose** | Schema validation, sparse indexing, and aggregation pipelines |
-| **Auth Engine** | **JWT & Passport.js** | JSON Web Token verification & Google OAuth 2.0 strategy |
-| **Encryption** | **bcrypt.js** | Salted password hashing prior to persistence |
-| **Security / CORS**| **CORS & dotenv** | Cross-Origin Resource Sharing control and secret environment protection |
-| **Hosting** | **Render** | Cloud hosting service running full-stack web backend service |
+AI Debate Arena addresses these challenges by providing a structured, AI-assisted debate environment with real-time evaluation and analytics.
 
 ---
 
-## 🏗️ System Architecture
+# 🎯 Objectives
 
-The following Mermaid diagram illustrates the data flow and system architecture between the client, backend server, authentication providers, MongoDB database, and Google Gemini AI services:
+The primary objectives of AI Debate Arena are:
 
-```mermaid
-graph TD
-    subgraph Client ["Client Layer (React.js)"]
-        UI[User Interface / React Router]
-        STT[Web Speech API - Speech-to-Text]
-        TTS[SpeechSynthesis API - Text-to-Speech]
-        State[React State & Hooks]
-    end
-
-    subgraph Backend ["Server Layer (Node.js & Express.js)"]
-        Server[Express Server / server.js]
-        AuthMW[Auth Middleware - JWT]
-        PassStrategy[Passport.js Google OAuth]
-        Routes[API Routes: /auth, /debates, /api/gemini]
-    end
-
-    subgraph External ["External Services & Databases"]
-        Mongo[(MongoDB Atlas Cloud DB)]
-        Gemini[Google Gemini 3.6 Flash API]
-        GoogleAuth[Google OAuth 2.0 Service]
-    end
-
-    UI -->|HTTP Requests / REST| Server
-    STT -->|Voice Transcripts| State
-    State -->|Debate Payloads| UI
-    
-    Server --> AuthMW
-    AuthMW --> Routes
-    
-    Routes -->|User & Debate Records| Mongo
-    Routes -->|Prompt Engineering & Evaluation| Gemini
-    Server -->|OAuth Handshake| GoogleAuth
-    GoogleAuth -->|Token Callback| PassStrategy
-    
-    TTS <--|Audio Synthesis| UI
-```
+- Provide an intelligent AI debate partner available anytime.
+- Improve users' logical reasoning and persuasion skills.
+- Encourage structured argument formation.
+- Deliver detailed performance analysis after every debate.
+- Support both voice and text interaction.
+- Maintain debate history for long-term progress tracking.
+- Provide a secure authentication system for user accounts.
+- Create an engaging learning experience using Artificial Intelligence.
 
 ---
 
-## 🔄 Workflow
+# ✨ Benefits
 
-```
-[User Registration / Google Login]
-               │
-               ▼
-   [Select / Enter Topic] ──► [Choose Difficulty & Duration]
-               │
-               ▼
-    [Launch Debate Arena] ──► [Select Mode: Text or Voice]
-               │
-               ▼
- [User Submits Argument] ──► [Express Proxy Endpoint]
-               │                      │
-               ▼                      ▼
-  [AI Reads Speech TTS] ◄── [Google Gemini Generates Response]
-               │
-               ▼
- [Timer Reaches Expiry] ──► [Trigger AI Final Evaluation]
-               │
-               ▼
- [Generate Multi-Factor Score] ──► [Save Transcript to MongoDB Atlas]
-               │
-               ▼
-  [Update Analytics Dashboard] ◄── [Render Score Breakdown]
-```
+### 🎤 Improve Public Speaking
+
+Practice speaking confidently through interactive AI debates.
 
 ---
 
-## 📁 Project Structure
+### 🧠 Strengthen Critical Thinking
 
-```
-AI-Debate-Arena2/
-├── public/
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
-├── src/
-│   ├── components/
-│   │   ├── Dashboard.js              # Analytics overview & Recharts visualizations
-│   │   ├── DebateApp.js              # Core debate engine (Text & Voice interaction)
-│   │   ├── ForgotPasswordPage.js     # Account password recovery & reset
-│   │   ├── HistoryPage.js             # Historical debate list & replay modal
-│   │   ├── LandingPage.js             # Hero presentation & platform features
-│   │   ├── LoginPage.js               # JWT login form & Google OAuth trigger
-│   │   ├── Navbar.js                  # Sticky responsive header & session state
-│   │   ├── ProfilePage.js             # User account editor, avatar picker & password update
-│   │   ├── RegisterPage.js            # User signup form & validation
-│   │   └── ScoreBreakdownView.js      # Graphical 6-factor score breakdown viewer
-│   ├── utils/
-│   │   ├── aiService.js               # Base URL helper exports
-│   │   └── apiConfig.js               # Centralized Render API URL constructor
-│   ├── App.css                        # Tailwind CSS imports & custom styles
-│   ├── App.js                         # Top-level state, session router & protected tabs
-│   └── index.js                       # React application entry point
-├── config/
-│   └── passport.js                    # Passport Google OAuth Strategy setup
-├── middleware/
-│   └── authMiddleware.js              # JWT Bearer token authentication middleware
-├── models/
-│   ├── User.js                        # Mongoose User schema (sparse googleId index)
-│   └── Debate.js                      # Mongoose Debate schema (history & scores)
-├── routes/
-│   ├── auth.js                        # Registration, login, profile, & password routes
-│   └── debates.js                     # Debate persistence, analytics, & deletion routes
-├── .env.example                       # Template for local environment configuration
-├── .gitignore                         # Excluded dependencies and runtime environment files
-├── package.json                       # Client & server npm dependencies
-├── README.md                          # Repository documentation
-└── server.js                          # Express server entry point & MongoDB Atlas connection
-```
+Develop logical reasoning by defending arguments against intelligent counterpoints.
 
 ---
 
-## 🔑 Authentication Flow
+### 📈 Track Continuous Progress
 
-```
-+-----------------------------------------------------------------------------------+
-|                               AUTHENTICATION FLOW                                 |
-+-----------------------------------------------------------------------------------+
-
-[Option A: Email & Password]
- 1. User enters Full Name, Username, Email, and Password.
- 2. Frontend posts payload to getApiUrl('/auth/register').
- 3. Backend verifies uniqueness in MongoDB Atlas & in-memory cache.
- 4. Password is hashed using bcrypt (10 salt rounds).
- 5. User document created in MongoDB Atlas with sparse googleId index.
- 6. JWT token signed with 7-day expiration (`JWT_SECRET`).
- 7. Bearer token returned and saved to browser `localStorage`.
-
-[Option B: Google OAuth 2.0]
- 1. User clicks "Sign in with Google".
- 2. Frontend redirects to `getApiUrl('/auth/google')`.
- 3. Passport.js handles redirect to Google Consent Screen.
- 4. Google returns authorization code to `/auth/google/callback`.
- 5. User matched by `googleId` or `email` in MongoDB Atlas.
- 6. JWT signed and returned via query parameters to the React client.
-
-[Protected Routes & Session Maintenance]
- 1. On application load, client reads stored token from `localStorage`.
- 2. Sends `GET /auth/me` with `Authorization: Bearer <TOKEN>` header.
- 3. Auth middleware validates JWT signature and attaches `req.userId`.
- 4. Fresh profile loaded; invalid tokens automatically purged.
-```
+Monitor debate performance through historical analytics and score trends.
 
 ---
 
-## 🤖 AI Debate Flow
+### 🤖 Learn with AI
 
-1. **Setup Phase:** User selects a topic, difficulty level (*School*, *College*, or *Professional*), duration timer, and side (*For* or *Against*).
-2. **Turn Generation:** User submits an argument through typing or Web Speech recognition.
-3. **API Proxy Dispatch:** React app sends the request payload to the Express server proxy endpoint (`/api/gemini`).
-4. **Prompt Engineering:** Server crafts a system prompt instructing Gemini to:
-   - Adopt the persona of a skilled debater holding the opposing stance.
-   - Address weaknesses in the user's latest claim.
-   - Maintain appropriate language complexity based on difficulty mode.
-   - Limit response length to ensure conversational rhythm.
-5. **Real-time Counter-Argument:** Gemini returns the structured rebuttal, rendered in the chat feed and spoken aloud via SpeechSynthesis.
-6. **Final Judgment:** When the timer expires, a final evaluation prompt is sent to Gemini to analyze the complete transcript and return a structured JSON evaluation object.
+Receive instant, objective feedback powered by Google Gemini AI.
 
 ---
 
-## ⚖️ AI Evaluation Criteria
+### 🌎 Practice Anytime
 
-At the conclusion of each debate, the argument transcript undergoes holistic analysis across **6 distinct criteria** (scored 0-100%):
+No need for debate partners or judges—practice whenever you want.
 
-| Criteria | Description & Evaluation Focus |
-| :--- | :--- |
-| **Topic Relevance** | Measures how consistently arguments directly address the core motion without diverting off-topic. |
-| **Argument Quality** | Assesses clarity, depth, logical construction, and premise validity of claims presented. |
-| **Evidence & Facts** | Evaluates concrete examples, empirical data, logical proofs, and illustrations cited. |
-| **Counter-Arguments** | Measures effectiveness in identifying, dismantling, and refuting the opponent's claims. |
-| **Logical Consistency** | Detects absence of contradictions, fallacies (e.g., ad hominem, straw man, slippery slope), and circular reasoning. |
-| **Communication & Style** | Evaluates persuasion, rhetorical poise, vocabulary choice, and delivery structure. |
+---
 
-### Scoring & Outcome Determination
-- **Cumulative Score:** Weighted average of all 6 individual metrics.
-- **Match Outcome:**
-  - **Win:** Cumulative score exceeds AI baseline performance for chosen difficulty.
-  - **Loss:** Cumulative score falls below AI baseline.
-  - **Tie:** Scores match within margin of error.
-- **Feedback Highlights:** Provides 3 actionable strengths and 3 key growth areas for future practice.
+### 📚 Educational Value
+
+Suitable for students, competitive debaters, educators, and interview preparation.
+
+---
+
+# ✨ Key Features
+
+## 🔐 Secure Authentication
+
+- User Registration
+- Login System
+- JWT Authentication
+- Google OAuth Login
+- Password Reset
+- Protected Routes
+- Profile Management
+
+---
+
+## 🤖 AI Debate Engine
+
+- AI-powered debate opponent
+- Real-time counter arguments
+- Multiple debate difficulty levels
+- Custom debate topics
+- Topic selection
+- Timed debate sessions
+- Adaptive AI responses
+
+---
+
+## 🎤 Voice & Text Debate
+
+- Voice Recognition
+- Speech-to-Text
+- Text-to-Speech
+- Traditional text debates
+- Live interaction
+- Automatic speech playback
+
+---
+
+## 📊 AI Performance Evaluation
+
+After every debate, the system evaluates:
+
+- Topic Relevance
+- Argument Quality
+- Evidence Usage
+- Counter Arguments
+- Logical Consistency
+- Communication Style
+
+Each category receives an individual score along with detailed suggestions for improvement.
 
 ---
 
 ## 📈 Analytics Dashboard
 
-The **Analytics Dashboard** aggregates historical debate metadata from MongoDB Atlas to deliver visual performance insights:
+Visual statistics include:
 
-- **Key Metrics Summary Cards:**
-  - **Total Debates Completed:** Lifetime matches logged.
-  - **Win / Loss Ratio & Rate:** Percentage win frequency visualization.
-  - **Average Score:** Overall mean rhetorical performance.
-  - **Highest Score:** Peak match score recorded.
-- **Visual Recharts Graphs:**
-  - **Score Progression Line Chart:** Timeline tracking score growth across matches.
-  - **Category Breakdown Radar/Bar Chart:** Comparative performance across the 6 evaluation factors.
-  - **Topic Distribution Pie Chart:** Frequency analysis of debated subject domains.
+- Total Debates
+- Wins & Losses
+- Average Score
+- Highest Score
+- Score Progress
+- Topic Distribution
+- Performance Trends
 
 ---
 
 ## 📜 Debate History
 
-- **Persistent Storage:** Transcripts, turn counts, difficulty settings, and score breakdowns are recorded directly to MongoDB Atlas.
-- **Interactive Replay:** Click on any historical debate record to open a full modal replay showing the entire turn-by-turn dialogue.
-- **Search & Filtering:** Search historical debates by topic keyword or filter by match outcome (Win/Loss).
-- **Record Management:** Individual debate records can be permanently deleted from user history.
+- View previous debates
+- Replay conversations
+- Compare performances
+- Review AI feedback
+- Delete old debates
+- Track long-term improvement
 
 ---
 
-## ⚡ Installation & Setup
+## 🎨 Modern User Interface
 
-### Prerequisites
+- Responsive Design
+- Dark Theme
+- Smooth Animations
+- Interactive Components
+- Clean Navigation
+- Mobile Friendly
+- Professional Dashboard
 
-Ensure you have the following installed locally:
-- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
-- [npm](https://www.npmjs.com/) (v9.0.0 or higher)
-- [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas)
-- [Google AI Studio Gemini API Key](https://aistudio.google.com/)
+---
+# 📸 Screenshots
+
+> **Note:** Replace the placeholder images below with actual screenshots from your application.
 
 ---
 
-### Step-by-Step Installation
+## 🏠 Landing Page
 
-#### 1. Clone the Repository
+<p align="center">
+<img src="assets/screenshots/landing-page.png" width="900" alt="Landing Page"/>
+</p>
+
+A modern landing page introducing AI Debate Arena with feature highlights, authentication options, and project overview.
+
+---
+
+## 🔑 Login & Registration
+
+<p align="center">
+<img src="assets/screenshots/login.png" width="900" alt="Login Page"/>
+</p>
+
+Supports:
+
+- JWT Authentication
+- Google OAuth Login
+- Secure Password Management
+- User Registration
+
+---
+
+## ⚔️ Debate Arena
+
+<p align="center">
+<img src="assets/screenshots/debate.png" width="900" alt="Debate Arena"/>
+</p>
+
+Users can:
+
+- Select debate topic
+- Choose side (For / Against)
+- Choose difficulty
+- Select duration
+- Debate using Text or Voice
+- Receive AI counter arguments in real time
+
+---
+
+## 📊 Analytics Dashboard
+
+<p align="center">
+<img src="assets/screenshots/dashboard.png" width="900" alt="Dashboard"/>
+</p>
+
+Visualizes:
+
+- Win Rate
+- Average Score
+- Debate Statistics
+- Score Trends
+- Topic Distribution
+- Performance History
+
+---
+
+## 📜 Debate History
+
+<p align="center">
+<img src="assets/screenshots/history.png" width="900" alt="History"/>
+</p>
+
+Users can review previous debates along with AI evaluations and performance scores.
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
+
+| Technology | Purpose |
+|------------|---------|
+| React.js | User Interface |
+| Tailwind CSS | Styling |
+| Framer Motion | Animations |
+| React Router | Routing |
+| Lucide React | Icons |
+| Recharts | Charts |
+| Web Speech API | Speech Recognition |
+| SpeechSynthesis API | Text-to-Speech |
+
+---
+
+## Backend
+
+| Technology | Purpose |
+|------------|---------|
+| Node.js | Runtime Environment |
+| Express.js | REST API |
+| MongoDB Atlas | Database |
+| Mongoose | ODM |
+| JWT | Authentication |
+| Passport.js | Google OAuth |
+| bcrypt | Password Hashing |
+| dotenv | Environment Variables |
+| CORS | Cross-Origin Requests |
+
+---
+
+## AI
+
+| Technology | Purpose |
+|------------|---------|
+| Google Gemini | AI Debate Generation |
+| Prompt Engineering | AI Behaviour |
+| JSON Response Parsing | Evaluation |
+| Speech Processing | Voice Debate |
+
+---
+
+## Deployment
+
+| Platform | Purpose |
+|----------|---------|
+| Render | Hosting |
+| MongoDB Atlas | Cloud Database |
+| Google AI Studio | Gemini API |
+
+---
+
+# 🏗 System Architecture
+
+```mermaid
+graph TD
+
+A[User]
+
+A --> B[React Frontend]
+
+B --> C[Express API]
+
+C --> D[Google Gemini AI]
+
+C --> E[MongoDB Atlas]
+
+C --> F[JWT Authentication]
+
+C --> G[Google OAuth]
+
+E --> C
+
+D --> C
+
+C --> B
+
+B --> A
+```
+
+---
+
+# 🔄 Application Workflow
+
+```mermaid
+flowchart TD
+
+Start([Start])
+
+Login[User Login]
+
+Topic[Choose Topic]
+
+Difficulty[Select Difficulty]
+
+Mode[Voice or Text]
+
+Debate[Debate Session]
+
+Gemini[Google Gemini]
+
+Evaluation[AI Evaluation]
+
+Database[Save Debate]
+
+Dashboard[Analytics Dashboard]
+
+History[Debate History]
+
+End([Finish])
+
+Start --> Login
+
+Login --> Topic
+
+Topic --> Difficulty
+
+Difficulty --> Mode
+
+Mode --> Debate
+
+Debate --> Gemini
+
+Gemini --> Debate
+
+Debate --> Evaluation
+
+Evaluation --> Database
+
+Database --> Dashboard
+
+Dashboard --> History
+
+History --> End
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-Debate-Arena/
+
+│
+
+├── public/
+
+│ ├── favicon.ico
+
+│ ├── index.html
+
+│ └── manifest.json
+
+│
+
+├── src/
+
+│ ├── components/
+
+│ ├── pages/
+
+│ ├── utils/
+
+│ ├── services/
+
+│ ├── assets/
+
+│ ├── App.js
+
+│ └── index.js
+
+│
+
+├── server.js
+
+├── package.json
+
+├── README.md
+
+├── .env.example
+
+└── .gitignore
+```
+
+---
+
+# 🔐 Authentication Flow
+
+```mermaid
+sequenceDiagram
+
+participant User
+
+participant React
+
+participant Express
+
+participant MongoDB
+
+participant JWT
+
+User->>React: Login
+
+React->>Express: Send Credentials
+
+Express->>MongoDB: Verify User
+
+MongoDB-->>Express: User Found
+
+Express->>JWT: Generate Token
+
+JWT-->>Express: Token
+
+Express-->>React: Login Success
+
+React-->>User: Dashboard
+```
+
+---
+
+# 🤖 AI Debate Flow
+
+```mermaid
+flowchart TD
+
+User[User Argument]
+
+API[Express API]
+
+Gemini[Google Gemini]
+
+Response[AI Counter Argument]
+
+Evaluation[AI Evaluation]
+
+Score[Performance Scores]
+
+User --> API
+
+API --> Gemini
+
+Gemini --> Response
+
+Response --> User
+
+User --> Evaluation
+
+Evaluation --> Score
+```
+
+---
+
+# ⚖ AI Evaluation Criteria
+
+The AI evaluates every completed debate using multiple performance parameters.
+
+| Evaluation Metric | Description |
+|-------------------|-------------|
+| Topic Relevance | Focus on debate topic |
+| Argument Quality | Logical reasoning |
+| Evidence | Supporting facts |
+| Counter Arguments | Rebuttal strength |
+| Logical Consistency | Detect contradictions |
+| Communication | Overall presentation |
+
+---
+
+## 📊 Evaluation Process
+
+1. User completes debate.
+
+2. Debate transcript is sent to Gemini.
+
+3. AI analyses the conversation.
+
+4. Individual category scores are generated.
+
+5. Overall score is calculated.
+
+6. Winner is decided.
+
+7. Feedback is generated.
+
+8. Debate is saved.
+
+9. Dashboard statistics are updated.
+
+10. User can review the debate anytime.
+
+---
+
+# 📊 Analytics Dashboard
+
+The Analytics Dashboard provides users with comprehensive insights into their debate performance. Every completed debate contributes to the overall statistics, helping users measure improvement over time.
+
+---
+
+## Dashboard Overview
+
+The dashboard displays:
+
+- 📈 Total Debates
+- 🏆 Wins & Losses
+- 📊 Win Rate
+- ⭐ Average Score
+- 🥇 Highest Score
+- 📅 Recent Activity
+- 📚 Topic Distribution
+- 📈 Score Progression
+
+---
+
+## Performance Metrics
+
+| Metric | Description |
+|---------|-------------|
+| Total Debates | Number of completed debates |
+| Total Wins | Total debates won |
+| Total Losses | Total debates lost |
+| Win Percentage | Overall success rate |
+| Average Score | Mean debate score |
+| Highest Score | Best recorded performance |
+| Average Debate Duration | Time spent debating |
+| Most Debated Topic | Frequently selected topic |
+
+---
+
+## Performance Charts
+
+The application visualizes user performance using interactive charts.
+
+### Supported Charts
+
+- Score Progress Chart
+- Win/Loss Distribution
+- Topic Distribution
+- Category-wise Performance
+- Average Score Trend
+- Debate Activity Timeline
+
+---
+
+# 📜 Debate History
+
+Every debate is securely stored for future review.
+
+Users can:
+
+- View previous debates
+- Read complete debate transcripts
+- Review AI evaluations
+- Compare previous performances
+- Track score improvements
+- Delete unwanted history
+
+---
+
+## Stored Information
+
+Each debate stores:
+
+- Debate Topic
+- User Side
+- Difficulty Level
+- Debate Duration
+- Complete Transcript
+- AI Responses
+- Category Scores
+- Final Result
+- Date & Time
+
+---
+
+# ⚙ Installation Guide
+
+## Prerequisites
+
+Before running the project, install:
+
+- Node.js (v18 or later)
+- npm
+- MongoDB Atlas Account
+- Google Gemini API Key
+- Google OAuth Credentials
+- Git
+
+---
+
+## Clone Repository
+
 ```bash
 git clone https://github.com/Peethambari123/AI-Debate-Arena2.git
+
 cd AI-Debate-Arena2
 ```
 
-#### 2. Install Dependencies
-Install all required client and server npm dependencies:
+---
+
+## Install Dependencies
+
 ```bash
 npm install
 ```
 
-#### 3. Configure Environment Variables
-Create a `.env` file in the root directory by copying `.env.example`:
+---
+
+## Configure Environment Variables
+
+Create a `.env` file in the project root.
+
 ```bash
 cp .env.example .env
 ```
-Fill in your credentials (see [Environment Variables](#-environment-variables) section below).
 
-#### 4. Run the Application
-Start the development server:
+---
+
+## Start Development Server
+
 ```bash
 npm start
 ```
-The Express backend server and React interface run seamlessly on `http://localhost:3000`.
 
----
+The application will be available at
 
-## 🔐 Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```env
-# Server Port Configuration
-PORT=3000
-
-# MongoDB Atlas Database URI
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/ai_debate_arena?retryWrites=true&w=majority
-
-# JWT & Session Secrets
-JWT_SECRET=your_super_secret_jwt_key_here_min_32_chars
-SESSION_SECRET=your_super_secret_session_key_here_min_32_chars
-
-# Google Gemini API Key
-GEMINI_API_KEY=your_google_gemini_api_key
-
-# Google OAuth Credentials
-GOOGLE_CLIENT_ID=your_google_oauth_client_id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
-
-# Frontend Application URL (Render Backend Domain)
-REACT_APP_API_URL=https://ai-debate-backend-o9rt.onrender.com
-CLIENT_URL=https://ai-debate-backend-o9rt.onrender.com
+```
+http://localhost:3000
 ```
 
 ---
 
-## 🚀 Deployment
+# 🔐 Environment Variables
 
-The application is fully configured for continuous deployment on **Render**.
+Example configuration:
 
-### Backend & Service Setup on Render
+```env
 
-1. **Connect Repository:** Log in to [Render Dashboard](https://dashboard.render.com/) and create a new **Web Service** connected to `https://github.com/Peethambari123/AI-Debate-Arena2`.
-2. **Environment & Runtime:**
-   - **Environment:** Node
-   - **Build Command:** `npm install`
-   - **Start Command:** `node server.js`
-3. **Environment Variables:** Add all variables defined in `.env` (`MONGO_URI`, `JWT_SECRET`, `SESSION_SECRET`, `GEMINI_API_KEY`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `REACT_APP_API_URL`).
-4. **MongoDB Atlas Network Access:** In MongoDB Atlas, ensure **Network Access** includes `0.0.0.0/0` (Allow Access from Anywhere) so Render dynamic IP addresses can connect securely.
+PORT=3000
 
----
+MONGO_URI=your_mongodb_connection_string
 
-## 📡 API Endpoints
+JWT_SECRET=your_jwt_secret
 
-### Authentication Routes (`/auth`)
+SESSION_SECRET=your_session_secret
 
-| Method | Endpoint | Description | Auth Required |
-| :--- | :--- | :--- | :---: |
-| `POST` | `/auth/register` | Register a new user account | ❌ No |
-| `POST` | `/auth/login` | Authenticate with email/username & password | ❌ No |
-| `GET` | `/auth/google` | Initiate Google OAuth 2.0 flow | ❌ No |
-| `GET` | `/auth/google/callback` | Google OAuth redirect callback | ❌ No |
-| `GET` | `/auth/me` | Fetch active user session metadata | YES (JWT) |
-| `PUT` | `/auth/profile` | Update profile details, username, or avatar | YES (JWT) |
-| `PUT` | `/auth/password` | Change user password | YES (JWT) |
-| `POST` | `/auth/forgot-password` | Request password reset code | ❌ No |
-| `POST` | `/auth/reset-password` | Reset password using verified code | ❌ No |
-| `POST` | `/auth/logout` | Terminate session | YES (JWT) |
+GOOGLE_CLIENT_ID=your_google_client_id
 
-### AI & Debate Routes (`/debates` & `/api`)
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-| Method | Endpoint | Description | Auth Required |
-| :--- | :--- | :--- | :---: |
-| `POST` | `/api/gemini` | Proxy request to Google Gemini API | ❌ Optional |
-| `POST` | `/debates/save` | Save completed debate transcript & scores | YES (JWT) |
-| `GET` | `/debates/history` | Retrieve user debate history | YES (JWT) |
-| `GET` | `/debates/analytics` | Fetch aggregated analytics & performance stats | YES (JWT) |
-| `DELETE` | `/debates/:id` | Delete a specific debate record | YES (JWT) |
+GEMINI_API_KEY=your_gemini_api_key
+
+CLIENT_URL=http://localhost:3000
+
+REACT_APP_API_URL=http://localhost:3000
+
+```
 
 ---
 
-## 🛠️ Challenges Faced
+# 🚀 Deployment
 
-1. **MongoDB Atlas Sparse Indexing for Google OAuth:**
-   - *Challenge:* Non-OAuth users registering via email/password caused a `MongoServerError: E11000 duplicate key error collection: test.users index: googleId_1 dup key: { googleId: null }` because multiple documents held `null` values under a standard unique index.
-   - *Solution:* Updated Mongoose `UserSchema` to treat `googleId` as a `sparse: true` index and added an automated server startup index cleanup handler dropping legacy indexes.
-2. **Web Speech API Browser Compatibility:**
-   - *Challenge:* Inconsistent continuous speech recognition behavior across non-Chromium browsers.
-   - *Solution:* Implemented graceful fallbacks, state indicators, manual text editing overlays, and browser compatibility checks guiding users.
-3. **Structured JSON Parsing from Gemini Evaluation:**
-   - *Challenge:* Generative AI models occasionally wrap JSON outputs in extra markdown formatting (e.g. ````json ... ````), leading to client JSON parsing exceptions.
-   - *Solution:* Created robust regex extraction sanitizer routines isolating raw JSON strings prior to parsing evaluation objects.
-4. **Dynamic API Routing Across Deployments:**
-   - *Challenge:* Cross-domain CORS blockages and path mismatch issues when deploying full-stack client-server bundles.
-   - *Solution:* Standardized API calls through a centralized helper (`getApiUrl`) referencing `REACT_APP_API_URL` and configured Express CORS wildcard origin policies.
+The application can be deployed using **Render**.
+
+## Deployment Steps
+
+### 1. Push Code
+
+Push the latest code to GitHub.
 
 ---
 
-## 💡 Key Learnings
+### 2. Create Render Web Service
 
-- **Full MERN Stack Integration:** Mastering asynchronous data flow between React frontends, Node/Express middleware, and MongoDB Atlas databases.
-- **Authentication & Security:** Implementing dual auth strategies (JWT and Google OAuth 2.0) with bcrypt password salting and protected route guards.
-- **Prompt Engineering & AI Integration:** Designing strict system prompts for Google Gemini to produce targeted, persona-driven debate responses and formatted JSON evaluation objects.
-- **Database Schema Optimization:** Using Mongoose schemas, sparse indexing, and aggregation pipelines for analytics queries.
-- **Responsive & Accessible UI Design:** Crafting dark-mode interfaces with Tailwind CSS and Framer Motion transitions.
+Connect the GitHub repository to Render.
 
 ---
 
-## 🔮 Future Enhancements
+### 3. Configure Build
 
-- [ ] **Global Leaderboard:** Public rankings based on win rates, debate volume, and highest rhetorical scores.
-- [ ] **Multiplayer Real-Time Debates:** WebSockets integration allowing human-vs-human debates judged by AI.
-- [ ] **Exportable PDF Reports:** Comprehensive transcript and evaluation export options for academic portfolios.
-- [ ] **Multi-Language Support:** Practice debating in Spanish, French, German, and Mandarin.
-- [ ] **AI Debate Coach:** In-debate real-time hints suggesting strong counter-arguments and logical points.
-- [ ] **Mobile Application:** Native iOS & Android application built using React Native.
-- [ ] **Admin Dashboard:** Moderation portal to monitor system analytics, manage topics, and review feedback.
+Build Command
+
+```bash
+npm install
+```
+
+Start Command
+
+```bash
+node server.js
+```
 
 ---
 
-## 👨‍💻 Developer
+### 4. Add Environment Variables
+
+Configure all variables from the `.env` file inside Render.
+
+---
+
+### 5. Deploy
+
+Render automatically builds and deploys the application.
+
+---
+
+# 🌐 API Documentation
+
+## Authentication APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /auth/register | Register user |
+| POST | /auth/login | Login |
+| GET | /auth/google | Google Login |
+| GET | /auth/me | Current User |
+| PUT | /auth/profile | Update Profile |
+| PUT | /auth/password | Change Password |
+| POST | /auth/logout | Logout |
+
+---
+
+## Debate APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /api/gemini | Generate AI Response |
+| POST | /debates/save | Save Debate |
+| GET | /debates/history | Debate History |
+| GET | /debates/analytics | Analytics |
+| DELETE | /debates/:id | Delete Debate |
+
+---
+
+# 🔒 Security Features
+
+The project follows several security practices.
+
+## Authentication
+
+- JWT Authentication
+- Google OAuth
+- Protected Routes
+- Session Validation
+
+---
+
+## Password Security
+
+- Password Hashing
+- Secure Authentication
+- Password Reset Support
+
+---
+
+## API Security
+
+- Input Validation
+- Authentication Middleware
+- Environment Variables
+- CORS Configuration
+
+---
+
+## Database Security
+
+- MongoDB Atlas
+- Secure Connection
+- User Isolation
+- Protected Collections
+
+---
+
+# ⚡ Performance Optimizations
+
+- Optimized React Rendering
+- Lazy Component Loading
+- Efficient State Management
+- API Response Optimization
+- Fast Database Queries
+- Responsive UI
+- Optimized Bundle Size
+- Efficient AI Request Handling
+
+---
+
+# ❓ Frequently Asked Questions (FAQ)
+
+## 1. What is AI Debate Arena?
+
+AI Debate Arena is an AI-powered debate platform that allows users to practice debates against an intelligent virtual opponent while receiving detailed performance evaluations and analytics.
+
+---
+
+## 2. Which AI model is used?
+
+The application integrates **Google Gemini** to generate intelligent counterarguments, evaluate debates, and provide constructive feedback.
+
+---
+
+## 3. Can I debate using my voice?
+
+Yes.
+
+The platform supports both:
+
+- 🎤 Voice Debate
+- 💬 Text Debate
+
+using browser speech technologies.
+
+---
+
+## 4. Is authentication secure?
+
+Yes.
+
+The application uses:
+
+- JWT Authentication
+- Google OAuth 2.0
+- Password Hashing
+- Protected Routes
+
+to help secure user accounts.
+
+---
+
+## 5. Is my debate history saved?
+
+Yes.
+
+Completed debates are stored so users can revisit previous sessions, review evaluations, and monitor progress over time.
+
+---
+
+## 6. Can I choose my own debate topics?
+
+Yes.
+
+Users can select predefined topics or enter custom debate topics before starting a session.
+
+---
+
+## 7. Is the application mobile friendly?
+
+Yes.
+
+The interface is responsive and works across desktops, tablets, and modern mobile browsers.
+
+---
+
+# 🛠 Troubleshooting
+
+## Application won't start
+
+### Possible Causes
+
+- Missing dependencies
+- Incorrect Node version
+- Missing environment variables
+
+### Solution
+
+```bash
+npm install
+npm start
+```
+
+---
+
+## MongoDB Connection Failed
+
+### Possible Causes
+
+- Invalid MongoDB URI
+- Network restrictions
+- Incorrect credentials
+
+### Solution
+
+- Verify the MongoDB Atlas connection string.
+- Check network access settings.
+- Confirm database credentials.
+
+---
+
+## Google Login Not Working
+
+### Solution
+
+- Verify Google OAuth Client ID.
+- Verify Client Secret.
+- Check Redirect URI configuration.
+
+---
+
+## Gemini API Errors
+
+### Solution
+
+- Verify API Key.
+- Check usage limits.
+- Confirm API access is enabled.
+
+---
+
+## Speech Recognition Not Working
+
+Speech recognition support depends on browser capabilities.
+
+For the best experience, use the latest version of Google Chrome or another Chromium-based browser.
+
+---
+
+# 🌐 Browser Compatibility
+
+| Browser | Supported |
+|----------|-----------|
+| Google Chrome | ✅ |
+| Microsoft Edge | ✅ |
+| Brave | ✅ |
+| Opera | ✅ |
+| Firefox | ⚠ Partial Voice Support |
+| Safari | ⚠ Partial Voice Support |
+
+---
+
+# 🚧 Challenges Faced
+
+During development several technical challenges were encountered, including:
+
+- AI response formatting consistency
+- Authentication integration
+- Voice recognition compatibility
+- Database schema management
+- API communication
+- Cross-Origin Resource Sharing (CORS)
+- Environment configuration
+- Deployment on Render
+- Real-time debate evaluation
+- Performance optimization
+
+Each challenge contributed to improving the application's overall architecture and reliability.
+
+---
+
+# 💡 Key Learnings
+
+This project provided valuable experience in:
+
+- Full Stack MERN Development
+- React Application Development
+- REST API Design
+- Authentication Systems
+- MongoDB Integration
+- Google Gemini API Integration
+- Prompt Engineering
+- AI Response Handling
+- Voice Technologies
+- Deployment & DevOps
+- UI/UX Design
+- Project Architecture
+
+---
+
+# 🔮 Future Enhancements
+
+The project can be extended with additional capabilities such as:
+
+- Multiplayer Human vs Human debates
+- AI Judge Panel
+- Debate Leaderboards
+- Team Debate Mode
+- Debate Tournament System
+- PDF Performance Reports
+- Video Debate Support
+- Multi-language Debates
+- AI Debate Coach
+- Personalized Learning Paths
+- Mobile Application
+- Dark & Light Themes
+- Admin Dashboard
+- Community Discussion Forum
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to contribute:
+
+1. Fork the repository
+
+2. Create a feature branch
+
+```bash
+git checkout -b feature/YourFeature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added New Feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/YourFeature
+```
+
+5. Open a Pull Request
+
+Please ensure that your code follows project standards and includes appropriate documentation where necessary.
+
+---
+
+# 📄 License
+
+This project is distributed for educational and learning purposes.
+
+Please refer to the repository for licensing details before using the project in production or commercial environments.
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to the technologies and communities that made this project possible.
+
+- Google Gemini
+- React
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Tailwind CSS
+- Render
+- Passport.js
+- JWT
+- Framer Motion
+- Recharts
+- Lucide React
+- Open Source Community
+
+---
+
+# 👨‍💻 Developer
 
 <div align="center">
 
-### **Peethambari Manavarti**
-*Developer & Maintainer*
+## **Peethambari Manavarti**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Peethambari123-181717?style=for-the-badge&logo=github)](https://github.com/Peethambari123)
-[![Repository](https://img.shields.io/badge/Repository-AI--Debate--Arena2-blue?style=for-the-badge&logo=github)](https://github.com/Peethambari123/AI-Debate-Arena2)
-[![Live App](https://img.shields.io/badge/Live_App-Render_Backend-000000?style=for-the-badge&logo=render)](https://ai-debate-backend-o9rt.onrender.com/)
+**AI & Full Stack Developer**
+
+Passionate about Artificial Intelligence, Full Stack Development, Machine Learning, and building impactful software solutions.
+
+### Connect with Me
+
+💻 GitHub:
+https://github.com/Peethambari123
+
+🌐 Project Repository:
+https://github.com/Peethambari123/AI-Debate-Arena2
+
+🚀 Live Demo:
+https://ai-debate-backend-o9rt.onrender.com/
 
 </div>
 
 ---
 
-## 🤝 Contributing
+# ⭐ Support
 
-Contributions, issues, and feature requests are welcome!
+If you found this project useful,
 
-1. **Fork the Repository** (`https://github.com/Peethambari123/AI-Debate-Arena2`)
-2. **Create a Feature Branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit Your Changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the Branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
+⭐ Star the repository
 
----
+🍴 Fork it
 
-## 📄 License
+📝 Share feedback
 
-This project is licensed under the **Educational Use License** — free for learning, personal practice, and demonstration purposes.
+🐞 Report issues
 
----
+✨ Suggest improvements
 
-## 💬 Support
-
-If you encounter any issues or have questions:
-- Open a GitHub Issue at [AI-Debate-Arena2 / Issues](https://github.com/Peethambari123/AI-Debate-Arena2/issues)
-- Star ⭐ the repository if you found this project helpful!
-
----
-
-## 🙏 Acknowledgements
-
-- [Google Gemini API](https://ai.google.dev/) for intelligent conversational models
-- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for cloud database infrastructure
-- [React](https://react.dev/) & [Tailwind CSS](https://tailwindcss.com/) for UI components and styling
-- [Render](https://render.com/) for web application hosting
-- [Lucide React](https://lucide.dev/) for vector icons
-- The Open Source Community for inspiring accessible AI tooling
+Your support motivates future development.
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by Peethambari Manavarti</sub>
+
+# ⚔️ AI Debate Arena
+
+### Empowering Better Thinkers Through AI-Powered Debates
+
+Built with ❤️ using
+
+**React • Node.js • Express • MongoDB Atlas • Google Gemini AI**
+
+⭐ **If you like this project, don't forget to star the repository!**
+
 </div>
